@@ -26,4 +26,4 @@ jobs:
       - run: yarn
       - run: yarn build
       - run: yarn test
-      - run: serve -s build
+      - run: pm2 start "serve -s build" --name react-cicd-test
