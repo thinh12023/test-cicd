@@ -25,7 +25,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn build
-      - run: yarn test
       - run: pm2 delete react-cicd-test
       - run: pm2 start "serve -s build" --name react-cicd-test
       - run: pm2 save
